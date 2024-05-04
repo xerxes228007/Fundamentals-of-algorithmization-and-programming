@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1600</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1600</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="OpenFileButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>950</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open file</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CourierNumberSelect">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>10</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Courier">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Courier №</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Incomplete">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>410</y>
+      <width>971</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(237, 51, 59)</string>
+    </property>
+    <property name="text">
+     <string>Incomplete orders:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CurierOrd">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>0</y>
+      <width>981</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(38, 162, 105)</string>
+    </property>
+    <property name="text">
+     <string>Curier orders:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeleteCourierButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>109</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(224, 27, 36)</string>
+    </property>
+    <property name="text">
+     <string>Delete courier</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">CourierInfo</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="EditCourierInfoButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Edit courier info (Write new info in form below)</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">CourierInfo</string>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="OrderNumber">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>209</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Order №</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="OrderNumberSelect">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>219</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EditOrderInfoButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>271</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Edit order info (Write new info in form below)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeleteOrderButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(224, 27, 36)</string>
+    </property>
+    <property name="text">
+     <string>Delete order</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SaveFileButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>950</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save in file</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AddOrderButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>370</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Add order (Write info in form below)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AddCourierButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Add courier (Write info in form below)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SelectedFile">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>920</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Selected file:</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="FileBrowser">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>920</y>
+      <width>441</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Coruierform">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>416</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(53, 132, 228)</string>
+    </property>
+    <property name="text">
+     <string>Courier form</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="NumberCurier">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>470</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>450</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Number</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>450</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Name</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="NameCurier">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>470</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="FromCurier">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>470</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>450</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>From</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>450</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Max Weight</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="ToCurier">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>470</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="MaxWeight">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>470</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>450</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>To</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>571</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>0</y>
+      <width>20</width>
+      <height>1031</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>410</y>
+      <width>571</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>550</y>
+      <width>571</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="CurierOrders">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>31</y>
+      <width>975</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>89</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>139</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>89</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>89</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Number</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Addres</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Data from</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Data to</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Time from</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Time to</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Weight</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTableWidget" name="IncompleteOrders">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>440</y>
+      <width>975</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>139</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Number</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Addres</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Data from</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Data to</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Time from</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Time to</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Weight</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="ClearCourierForm">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>520</y>
+      <width>561</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(143, 240, 164)</string>
+    </property>
+    <property name="text">
+     <string>Clear form</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>780</y>
+      <width>561</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 120, 0)</string>
+    </property>
+    <property name="text">
+     <string>Format for form:
+Number should contains only digit
+Name should contain non-space symbol
+From and To should contain time in minutes (0&lt;=time&lt;=1440)
+Max Weight - positive integer number(&lt;=1e18)
+Data: DD.MM.Y : DD - Day MM -  Month Y - Number of year (from 0 to 9999)
+DD and MM ALWAYS consists 2 digits</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>590</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Number</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ClearOrderForm">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>740</y>
+      <width>561</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(143, 240, 164)</string>
+    </property>
+    <property name="text">
+     <string>Clear form</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Orderform">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>556</y>
+      <width>561</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(53, 132, 228)</string>
+    </property>
+    <property name="text">
+     <string>Order form</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="NumberOrder">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>610</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Line" name="line_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>770</y>
+      <width>571</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>590</y>
+      <width>321</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Addres</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="AddresOrder">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>610</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>660</y>
+      <width>141</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Data from</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="DataFrom">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>680</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="DataTo">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>680</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>660</y>
+      <width>141</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Data to</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>660</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time to</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="TimeFromOrder">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="TimeToOrder">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>660</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time from</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="Weight">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>610</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>590</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Weight</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>950</y>
+      <width>981</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 120, 0)</string>
+    </property>
+    <property name="text">
+     <string>For start working you must choose the file with extension .inf</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1600</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="CourierInfo"/>
+ </buttongroups>
+</ui>

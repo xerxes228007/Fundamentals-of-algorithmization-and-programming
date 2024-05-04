@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>811</width>
+    <height>802</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>0</y>
+      <width>221</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+background-color: purple;
+}</string>
+    </property>
+    <property name="title">
+     <string>Выбор фигуры</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QRadioButton" name="bntTriangle">
+       <property name="text">
+        <string>Треугольник</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntCircle">
+       <property name="text">
+        <string>Круг</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntRhombus">
+       <property name="text">
+        <string>Ромб</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntSquare">
+       <property name="text">
+        <string>Квадрат</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntRect">
+       <property name="text">
+        <string>Прямоугольник</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntStar5">
+       <property name="text">
+        <string>Пятиконечная звезда</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntStar6">
+       <property name="text">
+        <string>Шестиконечная звезда</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntStar8">
+       <property name="text">
+        <string>Восьмиконечная звезда</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntHexagon">
+       <property name="text">
+        <string>Шестиугольник</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntMy">
+       <property name="text">
+        <string>Параллелограмм</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntdrawMY">
+       <property name="text">
+        <string>Нарисовать свою</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="bntDelete">
+       <property name="text">
+        <string>Стереть все</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bntsaveok">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color: green;
+}</string>
+       </property>
+       <property name="text">
+        <string>Выбрать</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>801</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+background-color: green;
+}</string>
+       </property>
+       <property name="title">
+        <string>Действия</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QPushButton" name="bntResize">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+background-color: blue;
+}</string>
+              </property>
+              <property name="text">
+               <string>Изменить размер</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="bntNewAngle">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+background-color: blue;
+}</string>
+              </property>
+              <property name="text">
+               <string>Повернуть</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="bntSandP">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+background-color: blue;
+}</string>
+              </property>
+              <property name="text">
+               <string>Получить площадь и периметр</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bntMovement">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+background-color: blue;
+}</string>
+            </property>
+            <property name="text">
+             <string>Движение</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="txtPerimeter">
+            <property name="text">
+             <string>Периметр: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="txtSquare">
+            <property name="text">
+             <string>Площадь: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="txtCenter">
+            <property name="text">
+             <string>Центр масс: </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+background-color: yellow;
+}</string>
+       </property>
+       <property name="title">
+        <string>Сменить координаты или другие параметры фигуры</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblX">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="horizontalSlider">
+              <property name="maximum">
+               <number>300</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBar">
+              <property name="maximum">
+               <number>300</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="znachlbl">
+              <property name="text">
+               <string>Значение: </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bntSave">
+            <property name="text">
+             <string>Save</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>579</x>
+      <y>349</y>
+      <width>221</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+background-color: orange;
+}</string>
+    </property>
+    <property name="title">
+     <string>Смена параметров анимации</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>252</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Изменить размер</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_2">
+        <property name="text">
+         <string>Повернуть в др. строну</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_3">
+        <property name="text">
+         <string>Движение в др. сторну</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>510</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>537</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

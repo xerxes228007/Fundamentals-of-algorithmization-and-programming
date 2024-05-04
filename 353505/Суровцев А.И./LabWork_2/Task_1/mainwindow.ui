@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1282</width>
+    <height>678</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#lineEdit[state = &quot;0&quot;] {
+	
+	background-color: rgb(234, 0, 0);
+}
+#lineEdit[state = &quot;1&quot;] {
+	
+	background-color: rgb(67, 135, 100);
+}
+#lineEdit[state = &quot;2&quot;] {
+	
+	background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1051</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <row/>
+    <column>
+     <property name="text">
+      <string>Дата</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Дней от даты</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Високосный?</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Прошлый</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Следующий</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Дней до ДР</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Номер недели</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Дней до next</string>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>0</y>
+      <width>201</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+background-color: green;
+}</string>
+    </property>
+    <property name="title">
+     <string>Действия</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="bntOpenDialog">
+       <property name="text">
+        <string>Отрыть файлы</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bntdatetoTable">
+       <property name="text">
+        <string>Добавить даты из файла</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bntToRT">
+       <property name="text">
+        <string>Дней до текущей даты</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bntIsLeepYear">
+       <property name="text">
+        <string>Високосный ли год?</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bntprev">
+       <property name="text">
+        <string>Дата прошлого дня</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bntnext">
+       <property name="text">
+        <string>Дата следующего дня</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="bntMoveHB">
+         <property name="text">
+          <string>Дней до ДР</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bntWeekibYear">
+         <property name="text">
+          <string>Номер недели в году</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bntGetnextday">
+         <property name="text">
+          <string>Дней до next day</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="inputMask">
+          <string>00.00.0000;_</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="state" stdset="0">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bntAddDate">
+         <property name="text">
+          <string>Добавить в файл</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bntHB">
+         <property name="text">
+          <string>Ввести дату ДР</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Найти дату для замены</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bnt_zamena">
+         <property name="text">
+          <string>Заменить</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="errorLabel">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1282</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
