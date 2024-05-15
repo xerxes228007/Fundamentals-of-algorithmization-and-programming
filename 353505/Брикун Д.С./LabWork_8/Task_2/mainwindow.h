@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "arrayheap.h"
-#include "listheap.h"
+#include "static_lib/arrayheap.h"
+#include "lib/listheap.h"
 #include <QMainWindow>
 #include <QStandardItemModel>
 

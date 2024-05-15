@@ -13,26 +13,26 @@ public:
     ~RBT() {
         clear();
     }
-    void add(T key, T1 value){
+    void add(T key, T1 value) {
         std::shared_ptr<Node<T, T1>> tmp = root, p = std::shared_ptr<Node<T, T1>>();
 
         while (tmp) {
             p = tmp;
 
-            if (tmp->key > key) {
+            if (tmp->key() > key) {
                 tmp = tmp->left;
-            } else if (tmp->key < key) {
+            } else if (tmp->key() < key) {
                 tmp = tmp->right;
             } else {
                 return;
             }
         }
 
-        tmp = std::shared_ptr<Node<T, T1>>(new Node<T, T1>(key, value));
+        tmp = std::make_shared<Node<T, T1>>(key, value);
         tmp->parent = p;
 
         if (p) {
-            if (tmp->key > p->key) {
+            if (tmp->key() > p->key()) {
                 p->right = tmp;
             } else {
                 p->left = tmp;
@@ -41,57 +41,93 @@ public:
             root = tmp;
         }
 
+        if (p) {
+            if (tmp->key() > p->key()) {
+                tmp->next = p->next;
+                if (p->next) {
+                    p->next->prev = tmp;
+                }
+                p->next = tmp;
+                tmp->prev = p;
+            } else {
+                tmp->prev = p->prev;
+                if (p->prev) {
+                    p->prev->next = tmp;
+                }
+                p->prev = tmp;
+                tmp->next = p;
+            }
+        } else {
+            tmp->next = nullptr;
+            tmp->prev = nullptr;
+        }
+
+        if (!tmp->prev) {
+            root = tmp;
+        }
+
         InsCase1(tmp);
         return;
     }
-    void remove(T key){
-        std::shared_ptr<Node<T, T1>> tmp = root ? find(root, key) : std::shared_ptr<Node<T, T1>>(); // Ищем узел с нужным ключем
-        // Повезло повезло, ниче делать не надо если такого узла нет
+    void remove(T key) {
+        std::shared_ptr<Node<T, T1>> tmp = root ? find(root, key) : std::shared_ptr<Node<T, T1>>();
+
         if (!tmp) {
             return;
         }
 
-        // Случай, когда дерево состоит из одного узла
+        // Update the doubly linked list pointers
+        if (tmp->prev) {
+            tmp->prev->next = tmp->next;
+        }
+        if (tmp->next) {
+            tmp->next->prev = tmp->prev;
+        }
+
         if (tmp->parent.expired() && !tmp->left && !tmp->right) {
-            root = std::shared_ptr<Node<T, T1>>(); // Обнуляем корень
+            root = std::shared_ptr<Node<T, T1>>();
             return;
         }
 
-        // Если у узла есть и левый и правый потомок
-        if (tmp->left && tmp->right)  {
-            // Ищем самый правый узел в левом поддереве
-            // Этот узел будет ближайшим меньшим к удаляемому, по значнию ключа
-            // Что дает нам возможность переместить его значение в удаляемый узел, и удалять уже новый, но у которого будет либо один, либо ноль потомков
-            // При таком способе прийдется рассматривать намного меньшее количество вариантов
+        if (tmp->left && tmp->right) {
             std::shared_ptr<Node<T, T1>> removed = tmp->left;
             while (removed->right) {
                 removed = removed->right;
             }
-            tmp->data = removed->data;
-            tmp->key = removed->key;
-            tmp = removed;
+            // Create a new Node with updated key and value
+            auto newNode = std::make_shared<Node<T, T1>>(removed->key(), removed->value()); // Use removed->key() instead of tmp->key()
+
+            // Update pointers to the new node
+            if (tmp->parent.expired()) {
+                root = newNode;
+            } else {
+                auto parent = tmp->parent.lock();
+                if (parent->left == tmp) {
+                    parent->left = newNode;
+                } else {
+                    parent->right = newNode;
+                }
+            }
+
+            // Update the current node to point to the new node
+            tmp = newNode;
         }
+
         std::shared_ptr<Node<T, T1>> child = tmp->left ? tmp->left : tmp->right;
-        // Ищем потомка, если таково имеется
-        // Случай, когда потомков нет
+
         if (!child) {
-            if (tmp->color) {// Удаление красного узла не привело бы к разбалансировке дерева
-                DelCase1(tmp); // А вот удаление черного узла нарушает свойства красно-черного дерева об одинаковой длинне черных путей
+            if (tmp->color) {
+                DelCase1(tmp);
             }
             std::shared_ptr<Node<T, T1>> p = tmp->parent.lock();
-
-            if (p->left == tmp) {// Меняем связи, тем самым удаляя узел, после чего тот выйдет из области видимости
+            if (p->left == tmp) {
                 p->left = child;
             } else {
                 p->right = child;
             }
-        }
-        // Случай, когда потомок есть
-        else {
-            child->parent = tmp->parent; // Меняем связи
+        } else {
+            child->parent = tmp->parent;
             std::shared_ptr<Node<T, T1>> p = tmp->parent.lock();
-
-            // Меняем связи
             if (tmp->parent.lock()) {
                 if (tmp == p->left) {
                     p->left = child;
@@ -99,10 +135,9 @@ public:
                     p->right = child;
                 }
             } else {
-                root = child; // Если надо, меняем корень дерева
-                // Если удаляемы узел был красным, то никакие свойства не нарушаются
+                root = child;
                 if (tmp->color) {
-                    if (!child->color) {// Если удаляемый узел был черным, а потомок красный, то можем сохранить свойстав дерева, перекрасив потомка в черныйё
+                    if (!child->color) {
                         child->color = 1;
                     } else {
                         DelCase1(child);
@@ -124,11 +159,11 @@ public:
     T1& operator[](T key){
         auto node = find(root, key);
         if (node) {
-            return node->data;
+            return node->value();
         } else {
             add(key, T1());
             node = find(root, key);
-            return node->data;
+            return node->value();
         }
     }
     void clear() {
@@ -383,9 +418,9 @@ protected:
 
     std::shared_ptr<Node<T, T1>> find(std::shared_ptr<Node<T, T1>> node, T key){
         while (node) {
-            if (node->key > key) {
+            if (node->key() > key) {
                 node = node->left;
-            } else if (node->key < key) {
+            } else if (node->key() < key) {
                 node = node->right;
             } else {
                 return node;
@@ -413,6 +448,78 @@ protected:
         return node;
     }
 
-};
+public:
+    class TreeIterator {
+    public:
+        TreeIterator(std::shared_ptr<Node<T, T1>> root) {
+            current = min(root);
+        }
 
+        std::shared_ptr<Node<T, T1>> Next() {
+            if (!current) return nullptr;
+
+            std::shared_ptr<Node<T, T1>> nextNode = nullptr;
+
+            if (current->right) {
+                nextNode = min(current->right);
+            } else {
+                std::shared_ptr<Node<T, T1>> parent;
+                while ((parent = current->parent.lock()) && current == parent->right) {
+                    current = parent;
+                }
+                nextNode = parent;
+            }
+
+            current = nextNode;
+            return current;
+        }
+
+        T Key() const {
+            return current ? current->key() : T();
+        }
+
+        std::shared_ptr<Node<T, T1>> current;
+
+    private:
+
+        std::shared_ptr<Node<T, T1>> min(std::shared_ptr<Node<T, T1>> node) {
+            if (!node) {
+                return nullptr;
+            }
+            while (node->left) {
+                node = node->left;
+            }
+            return node;
+        }
+    };
+    TreeIterator GetIterator() {
+        return TreeIterator(root);
+    }
+public:
+    class ListIterator {
+    public:
+        ListIterator(std::shared_ptr<Node<T, T1>> start) : current(start) {}
+
+        bool Next() {
+            if (current) {
+                current = current->next;
+                return current != nullptr;
+            }
+            return false;
+        }
+
+        T Key() const {
+            return current ? current->key() : T();
+        }
+
+        T1 Value() const {
+            return current ? current->value() : T1();
+        }
+        std::shared_ptr<Node<T, T1>> current;
+    };
+
+    ListIterator GetListIterator() {
+        return ListIterator(min(root));
+    }
+};
 #endif // RBT_H

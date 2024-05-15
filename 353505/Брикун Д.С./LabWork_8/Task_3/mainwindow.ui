@@ -216,6 +216,32 @@
      <string>set to map</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="textEdit_set">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>311</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_map">
+    <property name="geometry">
+     <rect>
+      <x>393</x>
+      <y>280</y>
+      <width>331</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

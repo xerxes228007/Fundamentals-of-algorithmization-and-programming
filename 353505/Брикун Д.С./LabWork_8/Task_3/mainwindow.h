@@ -44,5 +44,6 @@ private:
     Ui::MainWindow *ui;
     Set<int> set;
     Map<int, int> map;
+    void display();
 };
 #endif // MAINWINDOW_H
