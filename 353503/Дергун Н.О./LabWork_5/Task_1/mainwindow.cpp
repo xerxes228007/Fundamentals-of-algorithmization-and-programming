@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_analizer, SIGNAL(textChanged(QChar)), SLOT(slotColorText(QChar)));
 
     _redF.setForeground(Qt::red);
-    _greenF.setForeground(Qt::green);
+    _greenF.setForeground(Qt::darkGreen);
     _blackF.setForeground(Qt::black);
 
     presets();
@@ -37,6 +37,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 void MainWindow::presets()
 {

@@ -55,6 +55,7 @@ private slots:
   void on_customTrainingBtn_clicked();
 
 
+
 protected:
   Ui::MainWindow *ui;
 };
