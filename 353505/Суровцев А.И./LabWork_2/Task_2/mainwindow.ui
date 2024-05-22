@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>725</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#ln_vidachi[state1 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_vidachi[state1 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_vidachi[state1 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_vernut[state2 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_vernut[state2 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_vernut[state2 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_vernul[state3 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_vernul[state3 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_vernul[state3 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_mob_number[state4 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_mob_number[state4 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_mob_number[state4 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_code_of_book[state5 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_code_of_book[state5 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_code_of_book[state5 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_year_of_edition[state6 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_year_of_edition[state6 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_year_of_edition[state6 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_code_of_reader[state7 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_code_of_reader[state7 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_code_of_reader[state7 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_codeb[state8 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_codeb[state8 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_codeb[state8 = &quot;2&quot;] {
+	background-color: white;
+}
+#ln_coder[state9 = &quot;0&quot;] {
+	background-color: red;
+}
+#ln_coder[state9 = &quot;1&quot;] {
+	background-color: rgb(38, 162, 105);
+}
+#ln_coder[state9 = &quot;2&quot;] {
+	background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>541</width>
+      <height>331</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>411</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+background-color:rgb(100,200,0);
+}</string>
+    </property>
+    <property name="title">
+     <string>Заполнение данных</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>411</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+background-color:white;
+}</string>
+       </property>
+       <property name="title">
+        <string>Информация о книге</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>271</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Код книги</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_code_of_book">
+             <property name="inputMask">
+              <string>000000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state5" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Фамилия автора</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_fam"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Название</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_topic"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Год издания</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_year_of_edition">
+             <property name="inputMask">
+              <string>0000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state6" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Язык издания</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_language"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="bnt_info_book">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>100</y>
+          <width>111</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Подтвердить</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ln_error1">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>130</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+background-color:yellow;
+}</string>
+       </property>
+       <property name="title">
+        <string>Информация об читателе</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>271</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Код читателя</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_code_of_reader">
+             <property name="inputMask">
+              <string>000000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state7" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>ФИО</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_fio"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Домашний адрес</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_home_adress"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Телефон</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_mob_number">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="inputMask">
+              <string>+375000000000</string>
+             </property>
+             <property name="cursorPosition">
+              <number>4</number>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state4" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="bnt_info_reader">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>100</y>
+          <width>111</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Подтвердить</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ln_error2">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>130</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+background-color:orange;
+}</string>
+       </property>
+       <property name="title">
+        <string>Информация о взятых книгах</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>271</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Код читателя</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_coder">
+             <property name="inputMask">
+              <string>000000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state9" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Код книги</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_codeb">
+             <property name="inputMask">
+              <string>000000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state8" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Дата выдачи</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_vidachi">
+             <property name="inputMask">
+              <string>00.00.0000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state1" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Когда нужно вернуть</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_vernut">
+             <property name="inputMask">
+              <string>00.00.0000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state2" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Когда вернул</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="ln_vernul">
+             <property name="inputMask">
+              <string>00.00.0000;-</string>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="state3" stdset="0">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="bnt_info_get_book">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>100</y>
+          <width>111</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Подвтердить</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ln_error3">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>130</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>350</y>
+      <width>544</width>
+      <height>254</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Что вы хотите найти</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cbxWhatWantFind">
+         <item>
+          <property name="text">
+           <string>Список книг по автору</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Список книг по названию</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Книгу по ее коду</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Список книг у читателя по коду</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Код читателя по ФИО</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Выбрать</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Вывести найденные элементы</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>Что хотите удалить</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cnxRemove">
+         <item>
+          <property name="text">
+           <string>Книгу по названию</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Книгу по коду</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Читателя по ФИО</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Читателя по коду</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bnt_vibor">
+         <property name="text">
+          <string>Выбрать</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bnt_rem_vib">
+       <property name="text">
+        <string>Удалить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_18">
+       <item>
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Отсортировать что и по чем</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cbx_Sort">
+         <item>
+          <property name="text">
+           <string>Книги по фамилии автора</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Книги по названию</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Книги по году издания</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Читателей по ФИО</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bntSort">
+         <property name="text">
+          <string>Отсортировать</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="lblPSF">
+         <property name="text">
+          <string>Посмотреть содержимое файла</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cbxFiles">
+         <item>
+          <property name="text">
+           <string>book_file.txt</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>reader_file.txt</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>borrowing_file.txt</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bntOpen_Files">
+         <property name="text">
+          <string>Открыть</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bnt_dolj">
+       <property name="text">
+        <string>Вывести список должников</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <item>
+        <widget class="QPushButton" name="bnt_add_to_file">
+         <property name="text">
+          <string>Добавить в файл</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ln_error">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p/&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="bnt_end">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>630</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выход</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>980</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

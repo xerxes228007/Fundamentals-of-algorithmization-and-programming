@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="OpenFileButton">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>0</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open file</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="Table">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1402</width>
+      <height>875</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1402</width>
+      <height>875</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1402</width>
+      <height>875</height>
+     </size>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>233</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>233</number>
+    </attribute>
+    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Data</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Previous day</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Next day</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Your birthday is in (Days)</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>From last date (Days)</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Up to this day (Days)</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTextEdit" name="DateOfBirthday">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>140</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="documentTitle">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Writedate">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>110</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Write date of your bithday:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1430</x>
+      <y>180</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Date of your birthday
+↓</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="birth">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>230</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Today">
+    <property name="geometry">
+     <rect>
+      <x>1400</x>
+      <y>840</y>
+      <width>201</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="Add">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>70</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>50</y>
+      <width>191</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Write add for adding:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1410</x>
+      <y>670</y>
+      <width>191</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(143, 240, 164);
+color:rgb(0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>For adding/set date push
+Enter/Space after writing
+Format of data: DD.MM.Y
+DD - Day
+MM -  Month
+YYYY - Number(0-9999)
+DD and MM ALWAYS
+consists 2 digits </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1600</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
