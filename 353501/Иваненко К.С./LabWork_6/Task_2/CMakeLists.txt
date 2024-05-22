@@ -10,6 +10,13 @@ qt_standard_project_setup()
 
 qt_add_executable(helloapp
   main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
+  choosedialog.cpp choosedialog.ui
+  parentoption.cpp parentoption.h
+  paragraphoption.cpp paragraphoption.h
+  arrayoption.cpp arrayoption.h
+  structoption.cpp structoption.h
+  binstructoption.cpp binstructoption.h
+  paragraphtextoption.cpp paragraphtextoption.h
 )
 
 target_link_libraries(helloapp PRIVATE Qt6::Widgets)

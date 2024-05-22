@@ -9,7 +9,7 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 qt_standard_project_setup()
 
 qt_add_executable(helloapp
-  main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
+  main.cpp mainwindow.cpp mainwindow.h mainwindow.ui mystring.h
 )
 
 target_link_libraries(helloapp PRIVATE Qt6::Widgets)
