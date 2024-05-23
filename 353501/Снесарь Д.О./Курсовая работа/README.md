@@ -4,7 +4,7 @@
 
 ## Блок-схема для функции решения судоку
 
-Применяется в: `src/solver.cpp` в функции void GameWidget::on_solveB_clicked()
+Применяется в: `src/gamewidget.cpp` в функции void GameWidget::on_solveB_clicked()
 
 ![Algorithm scheme](schemes/1.png)
 
@@ -16,13 +16,13 @@
 
 ## Блок-схема для генерации уровня
 
-Применяется в: `src/generator.cpp` в функции void GameWidget::generateB_Clicked()
+Применяется в: `src/gamewidget.cpp` в функции void GameWidget::generateB_Clicked()
 
 ![Algorithm scheme](schemes/3.png)
 
 ## Блок-схема для создания двусвязного двумерного списка
 
-Применяется в: `src/solver.cpp` в функции void GameWidget::on_solveB_clicked()
+Применяется в: `src/gamewidget.cpp` в функции void GameWidget::on_solveB_clicked()
 
 ![Algorithm scheme](schemes/4.png)
 
