@@ -4,31 +4,31 @@
 
 ## Алгоритм обработки ввода пользователя
 
-Применяется в: `src/path/to/file/where/applied.cpp`
+Применяется в: `353504/Чуешов А. А./Курсовая работа/ScientificСalculator/Form1.cs` в методе EnterNumbers(sender,e)
 
 ![Algorithm scheme](schemes/1.png)
 
 
 ## Алгоритм обработки операций
 
-Применяется в: `src/path/to/file/where/applied.cpp`
+Применяется в: `353504/Чуешов А. А./Курсовая работа/ScientificСalculator/Form1.cs` в методе numberOper(sender, e)
 
 ![Algorithm scheme](schemes/2.png)
 
 ## Алгоритм, реализующий выполнение операций
 
-Применяется в: `src/path/to/file/where/applied.cpp`
+Применяется в: `353504/Чуешов А. А./Курсовая работа/ScientificСalculator/Form1.cs` в методе btnEqual_Click(sender,e)
 
 ![Algorithm scheme](schemes/3.png)
 
 ## Алгоритм, реализующий статистические функции
 
-Применяется в: `src/path/to/file/where/applied.cpp`
+Применяется в: `353504/Чуешов А. А./Курсовая работа/ScientificСalculator/Form1.cs` в методах MeanAsync(data), MedianAsync(data), StandardDeviationAsync(data), VarianceAsync(data), PearsonCorrelationAsync(xs,ys).
 
 ![Algorithm scheme](schemes/4.png)
 
 ## Алгоритм, реализующий вычисление статистических функций
 
-Применяется в: `src/path/to/file/where/applied.cpp`
+Применяется в: `353504/Чуешов А. А./Курсовая работа/ScientificСalculator/Form1.cs` в методе button1_Click(sender,e)
 
 ![Algorithm scheme](schemes/5.png)
