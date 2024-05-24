@@ -1,34 +1,34 @@
 # Приложение для сравнения цен на продукты питания
 
 ## Функциональная схема программы
-<img src="./Курсовая работа/schemes/main.png">
+<img src="./schemes/main.png">
 
 ## Блок-схема алгоритма, реализующего поиск подстроки в строке Кнута-Морриса-Пратта
 
 Применяется в: `src/stringprocessing.cpp`
 
-<img src="./Курсовая работа/schemes/KMP.png">
+<img src="./schemes/KMP.png">
 
 ## Блок-схема алгоритма, реализующего сортировку Timsort
 
 Применяется в: `src/productsort.cpp`
 
-<img src="./Курсовая работа/schemes/timsort.png">
+<img src="./schemes/timsort.png">
 
 ## Блок-схема алгоритма, реализующего трёхпутевую быструю сортировку строк
 
 Применяется в: `src/productsort.cpp`
 
-<img src="./Курсовая работа/schemes/quicksort.png">
+<img src="./schemes/quicksort.png">
 
 ## Блок-схема алгоритма, реализующего получение списка популярных товаров
 
 Применяется в: `src/data.cpp`
 
-<img src="./Курсовая работа/schemes/popular.png">
+<img src="./schemes/popular.png">
 
 ## Блок-схема алгоритма, реализующего сохранение и обработку данных о выбранном товаре
 
 Применяется в: `src/basketwidget.cpp`
 
-<img src="./Курсовая работа/schemes/basket.png">
+<img src="./schemes/basket.png">
