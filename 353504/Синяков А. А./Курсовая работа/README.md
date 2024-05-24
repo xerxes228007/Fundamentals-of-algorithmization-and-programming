@@ -4,5 +4,7 @@
 
 ## Метод Монте-Карло реализованный в симуляции подброса монеты (используется в [coinsimulation.cpp]() в методе double CoinSimulation::simulateCoinTossProbability(double tilt, int numTosses, double force, double mass). Применяется там же)
 
-![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/53eb5411-2a64-4343-b4fa-8d7ebe2a9b8a)
+![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/022ffdcb-2212-45bd-ab8a-110a8baa127a)
+
+
 
