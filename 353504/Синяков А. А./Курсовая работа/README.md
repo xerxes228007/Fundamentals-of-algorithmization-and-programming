@@ -4,7 +4,24 @@
 
 ## Метод Монте-Карло реализованный в симуляции подброса монеты (используется в [coinsimulation.cpp]() в методе double CoinSimulation::simulateCoinTossProbability(double tilt, int numTosses, double force, double mass). Применяется там же)
 
-![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/022ffdcb-2212-45bd-ab8a-110a8baa127a)
+![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/5ce5f48b-184a-4a98-9eb3-29dc9f4816f7)
+
+## Алгоритм по расчету взвешенного угла наклона монеты (используется в [coinsimulation.cpp]() в методе double CoinSimulation::calculateWeightedAngle(double angle, double force, double mass). Применяется там же)
+
+![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/2d201a78-1900-45e1-bf49-5fbade1931bb)
+
+## Алгоритм выполнения Байесовских сетей (используется в [mainwindow.cpp]() в методе void MainWindow::updateProbabilities(int playerFortressStrength, int computerFortressStrength, int defenseStrategy, int attackStrategy). Применяется там же)
+
+![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/f74f9958-e6b5-4843-9a56-c35ec35d8eee)
+
+## Алгоритм основанный на Марковских моделях и цепях (используется в [mainwindow.cpp]() в методе void MainWindow::simulateDisasterEvent(). Применяется там же)
+
+![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/66a282b4-9eda-4c40-ab32-aaf9e410d8ba)
+
+## Алгоритм по построению графика зависимости вероятности выпадения орла и решки от количества подбросов монеты (используется в [mainwindow.cpp]() в методе void MainWindow::plotCoinTossProbabilityGraph(int maxTosses, double tilt, double force, double mass). Применяется там же)
+
+![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/623b21ec-b604-4163-8515-b30dc76be7df)
+
 
 
 
