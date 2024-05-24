@@ -2,11 +2,11 @@
 
 включает в себя две симуляции ("Бросок монеты" и "Боулинг") и две стратегические игры ("Башни" и "Эволюция города"), каждая из которых предлагает уникальные возможности для анализа и стратегии.
 
-## Метод Монте-Карло реализованный в симуляции подброса монеты (используется в [coinsimulation.cpp]() в методе double CoinSimulation::simulateCoinTossProbability(double tilt, int numTosses, double force, double mass). Применяется там же)
+## Метод Монте-Карло реализованный в симуляции подброса монеты (используется в [coinsimulation.cpp](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/blob/course_paper/353504/%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%20%D0%90.%20%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/coinsimulation.cpp) в методе double CoinSimulation::simulateCoinTossProbability(double tilt, int numTosses, double force, double mass). Применяется там же)
 
 ![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/5ce5f48b-184a-4a98-9eb3-29dc9f4816f7)
 
-## Алгоритм по расчету взвешенного угла наклона монеты (используется в [coinsimulation.cpp]() в методе double CoinSimulation::calculateWeightedAngle(double angle, double force, double mass). Применяется там же)
+## Алгоритм по расчету взвешенного угла наклона монеты (используется в [coinsimulation.cpp](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/blob/course_paper/353504/%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%20%D0%90.%20%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/coinsimulation.cpp) в методе double CoinSimulation::calculateWeightedAngle(double angle, double force, double mass). Применяется там же)
 
 ![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/2d201a78-1900-45e1-bf49-5fbade1931bb)
 
