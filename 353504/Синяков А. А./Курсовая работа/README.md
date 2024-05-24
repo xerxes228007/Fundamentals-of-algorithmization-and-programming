@@ -10,11 +10,11 @@
 
 ![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/2d201a78-1900-45e1-bf49-5fbade1931bb)
 
-## Алгоритм выполнения Байесовских сетей (используется в [mainwindow.cpp](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/blob/course_paper/353504/%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%20%D0%90.%20%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/mainwindow.cpp) в методе void MainWindow::updateProbabilities(int playerFortressStrength, int computerFortressStrength, int defenseStrategy, int attackStrategy). Применяется там же)
+## Алгоритм выполнения Байесовских сетей реализованный в стратегической игре "Башни" (используется в [mainwindow.cpp](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/blob/course_paper/353504/%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%20%D0%90.%20%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/mainwindow.cpp) в методе void MainWindow::updateProbabilities(int playerFortressStrength, int computerFortressStrength, int defenseStrategy, int attackStrategy). Применяется там же)
 
 ![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/f74f9958-e6b5-4843-9a56-c35ec35d8eee)
 
-## Алгоритм основанный на Марковских моделях и цепях (используется в [mainwindow.cpp](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/blob/course_paper/353504/%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%20%D0%90.%20%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/mainwindow.cpp) в методе void MainWindow::simulateDisasterEvent(). Применяется там же)
+## Алгоритм основанный на Марковских моделях и цепях реализованный в стратегической игре "Эволюция города" (используется в [mainwindow.cpp](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/blob/course_paper/353504/%D0%A1%D0%B8%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2%20%D0%90.%20%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/mainwindow.cpp) в методе void MainWindow::simulateDisasterEvent(). Применяется там же)
 
 ![image](https://github.com/Artiomsin/Fundamentals-of-algorithmization-and-programming/assets/149619968/66a282b4-9eda-4c40-ab32-aaf9e410d8ba)
 
