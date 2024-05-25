@@ -1,33 +1,35 @@
-# Создание простейшего аудиоредактора / среды DAW
+# Разработка программы на языке С++, с использованием фреймворка QT, реализующая игру морской бой
 
-Примечание: загруженный проект носит ознакомительный характер и не содержит необходимого подмодуля -- библиотеки PortAudio. Для сборки проекта см. [основной репозиторий](https://github.com/artemious3/aedit).
+## Функциональная схема программы
 
-## Блок-схема алгоритма, реализующего быстрое преобразование Фурье
+![Algorithm scheme](schemes/1.png)
+
+## Блок-схема алгоритма, реализующая авторассановку кораблей
 
 Применяется в `src/effects/Utils.h` в функции `Utils::ef_fft`.
 
-![ДПФ](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_dft.png)
+![Algorithm scheme](schemes/2.png)
 
-## Блок-схема алгоритма, реализующего оконное преобразование Фурье
+## Блок-схема алгоритма, реализующая проверку на корректное расположение кораблей
 
 Применяется в `src/effects/FFTProcessor.cpp` в функции `FFTProcessor::_process`.
 
-![ОПФ](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/schemes_stft.png)
+![Algorithm scheme](schemes/3.png)
 
-## Блок-схема алгоритма, реализующего реверберацию
+## Блок-схема алгоритма, реализующая алгоритм стрельбы для бота
 
 Применяется в `src/effects/Reverb.cpp` в функции `Reverb::_process`.
 
-![Реверберация](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_rev.png)
+![Algorithm scheme](schemes/4.png)
 
-## Блок-схема алгоритма, реализующего ратяжение звука по времени
+## Блок-схема алгоритма, реализующая проверку на целостность корабля
 
 Применяется в `src/effects/TimePitch.cpp` в функции `TimePitch::_process`.
 
-![Растяжение по времени](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_tp.png)
+![Algorithm scheme](schemes/5.png)
 
-## Блок-схема алгоритма, реализующего фазовый вокодер
+## Блок-схема алгоритма, реализующая статистику побед и поражений в игре
 
 Применяется в `src/effects/Pitch.cpp` в функции `Pitch::processFftChunk`.
 
-![Фазовый вокодер](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_pv.png)
+![Algorithm scheme](schemes/6.png)
