@@ -12,7 +12,7 @@
 
 ## Блок-схема алгоритма, реализующая проверку на корректное расположение кораблей
 
-Применяется в `src/effects/FFTProcessor.cpp` в функции `FFTProcessor::_process`.
+Применяется в `src/BattleShip/correctposship.cpp` в функции `CorrectPosShip::correctPosShip`.
 
 ![Algorithm scheme](schemes/3.png)
 
