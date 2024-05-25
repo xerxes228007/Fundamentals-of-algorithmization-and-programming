@@ -24,7 +24,7 @@
 
 ## Блок-схема алгоритма, реализующая проверку на целостность корабля
 
-Применяется в `src/BattleShip/TimePitch.cpp` в функции `TimePitch::_process`.
+Применяется в `src/BattleShip/battlefield.cpp` в функции `Battlefield::checkToKill`.
 
 ![Algorithm scheme](schemes/5.png)
 
