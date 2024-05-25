@@ -18,7 +18,7 @@
 
 ## Блок-схема алгоритма, реализующая алгоритм стрельбы для бота
 
-Применяется в `src/BattleShip/bot.cpp` в функции `Reverb::_process`.
+Применяется в `src/BattleShip/bot.cpp` в функциях `Bot::randomShot() и Bot::hitShip()`.
 
 ![Algorithm scheme](schemes/4.png)
 
