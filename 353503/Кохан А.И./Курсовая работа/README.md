@@ -30,6 +30,6 @@
 
 ## Блок-схема алгоритма, реализующая статистику побед и поражений в игре
 
-Применяется в `src/BattleShip/Pitch.cpp` в функции `Pitch::processFftChunk`.
+Применяется в `src/BattleShip/statswindow.cpp` в функции `StatsWindow::AddStats`.
 
 ![Algorithm scheme](schemes/6.png)
