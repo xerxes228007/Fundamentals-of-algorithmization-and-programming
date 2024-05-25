@@ -6,7 +6,7 @@
 
 ## Блок-схема алгоритма, реализующая авторассановку кораблей
 
-Применяется в `src/effects/Utils.h` в функции `Utils::ef_fft`.
+Применяется в `src/BattleShip/addShip.cpp` в функции `AddShips::autoPlacing`.
 
 ![Algorithm scheme](schemes/2.png)
 
