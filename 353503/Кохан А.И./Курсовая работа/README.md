@@ -18,18 +18,18 @@
 
 ## Блок-схема алгоритма, реализующая алгоритм стрельбы для бота
 
-Применяется в `src/effects/Reverb.cpp` в функции `Reverb::_process`.
+Применяется в `src/BattleShip/bot.cpp` в функции `Reverb::_process`.
 
 ![Algorithm scheme](schemes/4.png)
 
 ## Блок-схема алгоритма, реализующая проверку на целостность корабля
 
-Применяется в `src/effects/TimePitch.cpp` в функции `TimePitch::_process`.
+Применяется в `src/BattleShip/TimePitch.cpp` в функции `TimePitch::_process`.
 
 ![Algorithm scheme](schemes/5.png)
 
 ## Блок-схема алгоритма, реализующая статистику побед и поражений в игре
 
-Применяется в `src/effects/Pitch.cpp` в функции `Pitch::processFftChunk`.
+Применяется в `src/BattleShip/Pitch.cpp` в функции `Pitch::processFftChunk`.
 
 ![Algorithm scheme](schemes/6.png)
