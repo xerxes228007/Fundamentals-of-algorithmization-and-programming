@@ -40,6 +40,7 @@ public:
     }
     void remove(int key)
     {
+        if(table[hash(key)].size()!=0)
         table[hash(key)].pop();
     }
     int size()
@@ -55,9 +56,9 @@ public:
             //qDebug()<<table[i].size();
         }
     }
-    QVector<stack<int>> getTable() const
+    stack<int>& at(int ind)
     {
-        return table;
+        return table[ind];
     }
 };
 

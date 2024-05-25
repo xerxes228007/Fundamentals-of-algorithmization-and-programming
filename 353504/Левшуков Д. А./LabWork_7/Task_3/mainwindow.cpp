@@ -32,7 +32,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::showTable()
 {
-    QVector<stack<int>> t=table->getTable();
+    //QVector<stack<int>> t=table->getTable();
 
     ui->tableWidget->clear();
 
@@ -41,7 +41,7 @@ void MainWindow::showTable()
     int col=0;
 
     for(int i=0;i<size;i++)
-        col=std::max(col,t[i].size());
+        col=std::max((long long)col,table->at(i).size());
 
     if(col==0)return;
     if(ui->tableWidget->columnCount()!=col)
@@ -60,20 +60,22 @@ void MainWindow::showTable()
     ui->tableWidget->setHorizontalHeaderLabels(names);
     }
     //names.clear();
-    for(int i=0;i<t.size();i++)
+    for(int i=0;i<table->size();i++)
     {
+        QVector<int> st=table->at(i).to_QVec();
         int j=0;
-        while(!t[i].empty())
+        for(auto& v:st)
         {
-
             QTableWidgetItem *it=new QTableWidgetItem ();
             it->setTextAlignment(Qt::AlignCenter);
-            it->setText(QString::fromStdString(std::to_string(t[i].peek())));
+            it->setText(QString::fromStdString(std::to_string(v)));
             ui->tableWidget->setItem(i,j,it);
             j++;
-            t[i].pop();
+            //t[i].pop();
         }
+
     }
+
 
 }
 
