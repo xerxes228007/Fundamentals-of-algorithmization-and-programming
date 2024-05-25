@@ -24,9 +24,9 @@
 - People who want a flexible and customizable note management system.
 - Those who prefer open source.
 
-## Блок-схема алгоритма, реализующего связи в графе
+## Блок-схема алгоритма, реализующего размещение заметок в индексированной последовательности
 
-Применяется в: `graphwidget.cpp`
+Применяется в: `notesmanager.cpp`
 
 ![Algorithm scheme](schemes/1.png)
 
@@ -35,3 +35,25 @@
 Применяется в: `noteslistwidget.cpp`
 
 ![Algorithm scheme](schemes/2.png)
+
+## Блок-схема алгоритма, реализующего связи между заметками
+
+Применяется в: `graphwidget.cpp`
+
+![Algorithm scheme](schemes/3.png)
+
+## Блок-схема алгоритма, реализующего сортировку заметок по времени и дате последнего изменения
+
+Применяется в: `mainwindow.cpp`
+
+![Algorithm scheme](schemes/4.png)
+
+## Блок-схема алгоритма, реализующего хранение данных
+
+Применяется в: `xlmstorage.cpp`
+
+![Algorithm scheme](schemes/5.png)
+
+## Функциональная схема программы
+
+![Algorithm scheme](schemes/6.png)
