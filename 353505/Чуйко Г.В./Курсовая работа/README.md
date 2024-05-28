@@ -18,13 +18,13 @@
 
 Применяется в:  `client/src/pages/*`; `client/src/app/*`;
 
-![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/88070e81-a5f8-4b1d-9a32-48527bf87950)
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/1a2a9587-eedd-44de-9a3a-da946d98c409)
 
 Блок-схема обновление токена
 
 Применяется в: `server/server.ts`; `client/src/api/post.tsx`; `client/src/pages/user/User.tsx`; `client/src/pages/log/Log.tsx`;  
 
-![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/c4dd2b9d-8898-4942-b258-62d85dd4437b)
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/37cbcbe4-9e58-459b-83f0-f574968d264e)
 
 Блок-схема создания пользователя
 
