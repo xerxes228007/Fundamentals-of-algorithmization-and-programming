@@ -2,8 +2,32 @@
 
 Крипто-кошелек в тестовой сети Hardhat
 
-Блок-схема алгоритма
+Блок-схема авторизации
 
-Применяется в: `server/server.ts`; `client/src/api/post.tsx`; `client/src/api/post.tsx`; `client/src/pages/log/Log.tsx`;  
+Применяется в: `server/server.ts`; `client/src/api/post.tsx`; `client/src/pages/log/Log.tsx`;  
 
 ![image](https://github.com/taicutsun/kyrc2/assets/71333824/881d105a-eecb-4419-9aaf-0db6bf04528a)
+
+Блок-схема отправки средств
+
+Применяется в: `server/server.ts`; `blockchain/contracts/Lock.sol`; `client/src/api/post.tsx`; `client/src/app/appSlice.tsx`; `client/src/pages/user/User.tsx`;  
+
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/fca2fa3d-55b7-47ba-8faf-26e56b221daf)
+
+Блок-схема управления данными
+
+Применяется в:  `client/src/pages/*`; `client/src/app/*`;
+
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/88070e81-a5f8-4b1d-9a32-48527bf87950)
+
+Блок-схема обновление токена
+
+Применяется в: `server/server.ts`; `client/src/api/post.tsx`; `client/src/pages/user/User.tsx`; `client/src/pages/log/Log.tsx`;  
+
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/c4dd2b9d-8898-4942-b258-62d85dd4437b)
+
+Блок-схема создания пользователя
+
+Применяется в: `server/server.ts`; `client/src/api/post.tsx`; `client/src/app/appSlice.tsx`; `client/src/pages/user/User.tsx`;  
+
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/950bfb29-2f3f-4af7-8622-2d61a9cf10d9)
