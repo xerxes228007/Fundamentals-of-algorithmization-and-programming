@@ -6,7 +6,7 @@
 
 Применяется в: `server/server.ts`; `client/src/api/post.tsx`; `client/src/pages/log/Log.tsx`;  
 
-![image](https://github.com/taicutsun/kyrc2/assets/71333824/881d105a-eecb-4419-9aaf-0db6bf04528a)
+![image](https://github.com/taicutsun/Fundamentals-of-algorithmization-and-programming/assets/71333824/7ccac320-a204-46f1-a1a6-09fe2bd3d846)
 
 Блок-схема отправки средств
 
