@@ -1,33 +1,32 @@
-# Создание простейшего аудиоредактора / среды DAW
+# Симулятор распространения болезни
 
-Примечание: загруженный проект носит ознакомительный характер и не содержит необходимого подмодуля -- библиотеки PortAudio. Для сборки проекта см. [основной репозиторий](https://github.com/artemious3/aedit).
+## Блок-схема алгоритма, реализующего генерацию районов
 
-## Блок-схема алгоритма, реализующего быстрое преобразование Фурье
+Применяется в `src/startStage/generations.cpp` в функции `GenHandler::generateDistricts`.
 
-Применяется в `src/effects/Utils.h` в функции `Utils::ef_fft`.
+![Генерация районов](https://github.com/DergunNik/Fundamentals-of-algorithmization-and-programming/blob/751693078a84efabacb076d9f0dc069cefbdedb6/353503/%D0%94%D0%B5%D1%80%D0%B3%D1%83%D0%BD%20%D0%9D.%D0%9E./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/2.png)
 
-![ДПФ](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_dft.png)
+## Блок-схема алгоритма, реализующего генерацию жителей
 
-## Блок-схема алгоритма, реализующего оконное преобразование Фурье
+Применяется в `src/startStage/generations.cpp` в функции `GenHandler::generateCitizens`.
 
-Применяется в `src/effects/FFTProcessor.cpp` в функции `FFTProcessor::_process`.
+![Генрация жителей](https://github.com/DergunNik/Fundamentals-of-algorithmization-and-programming/blob/751693078a84efabacb076d9f0dc069cefbdedb6/353503/%D0%94%D0%B5%D1%80%D0%B3%D1%83%D0%BD%20%D0%9D.%D0%9E./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/3.png)
 
-![ОПФ](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/schemes_stft.png)
+## Блок-схема алгоритма, реализующего генерацию расписаний
 
-## Блок-схема алгоритма, реализующего реверберацию
+Применяется в `src/startStage/generations.cpp` в функции `GenHandler::generateSchedules`.
 
-Применяется в `src/effects/Reverb.cpp` в функции `Reverb::_process`.
+![Генрация расписаний](https://github.com/DergunNik/Fundamentals-of-algorithmization-and-programming/blob/751693078a84efabacb076d9f0dc069cefbdedb6/353503/%D0%94%D0%B5%D1%80%D0%B3%D1%83%D0%BD%20%D0%9D.%D0%9E./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/4.png)
 
-![Реверберация](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_rev.png)
+## Блок-схема алгоритма, реализующего распространение болезни
 
-## Блок-схема алгоритма, реализующего ратяжение звука по времени
+Применяется в `src/simulationStage/ball.cpp` и `src/commonClasses/citizen.cpp` в функциях `Ball::move`, `Ball::collide` и `Citizen::getInfected`.
 
-Применяется в `src/effects/TimePitch.cpp` в функции `TimePitch::_process`.
+![Распространение болезни](https://github.com/DergunNik/Fundamentals-of-algorithmization-and-programming/blob/751693078a84efabacb076d9f0dc069cefbdedb6/353503/%D0%94%D0%B5%D1%80%D0%B3%D1%83%D0%BD%20%D0%9D.%D0%9E./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/5.png)
 
-![Растяжение по времени](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_tp.png)
 
-## Блок-схема алгоритма, реализующего фазовый вокодер
+## Блок-схема алгоритма, реализующего генерацию жителей
 
-Применяется в `src/effects/Pitch.cpp` в функции `Pitch::processFftChunk`.
+Применяется в `src/finalStage/movingaverage.h` в функции `MovingAverage::addData`.
 
-![Фазовый вокодер](https://github.com/artemious3/Fundamentals-of-algorithmization-and-programming/blob/coursework/353501/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90.%D0%90./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/scheme_pv.png)
+![Скользящее среднее](https://github.com/DergunNik/Fundamentals-of-algorithmization-and-programming/blob/751693078a84efabacb076d9f0dc069cefbdedb6/353503/%D0%94%D0%B5%D1%80%D0%B3%D1%83%D0%BD%20%D0%9D.%D0%9E./%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/schemes/6.png)
