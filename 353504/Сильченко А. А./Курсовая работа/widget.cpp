@@ -54,8 +54,8 @@ void Widget::on_pushButton_clicked()
                  randomBetween(30,470));*/
     scene->addItem(item);    // Добавляем элемент на графическую сцену
     fishes(it);
-    if(eat(it))
-        item->growFish();
+    //if(eat(it))
+        //item->growFish();
 }
 
 void Widget::fishes(Fishes *it)
