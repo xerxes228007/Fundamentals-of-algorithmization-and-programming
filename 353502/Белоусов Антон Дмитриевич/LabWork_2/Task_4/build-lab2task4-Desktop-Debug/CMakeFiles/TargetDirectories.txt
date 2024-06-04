@@ -1,8 +1,0 @@
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/lab2task4.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/install.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/install/local.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/install/strip.dir
-/home/aonbel/projects/qt5/lab2/build-lab2task4-Desktop-Debug/CMakeFiles/lab2task4_autogen.dir

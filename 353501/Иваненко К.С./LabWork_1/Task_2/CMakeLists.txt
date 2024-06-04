@@ -11,7 +11,8 @@ qt_standard_project_setup()
 qt_add_executable(helloapp
   main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
   romb.cpp figure.cpp paintscene.cpp triangle.cpp
-  square.cpp ellipse.cpp star.cpp
+  rectangle.cpp ellipse.cpp star.cpp polygon.cpp
+  parallelogram.cpp paint.cpp
 )
 
 target_link_libraries(helloapp PRIVATE Qt6::Widgets)

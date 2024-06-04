@@ -6,13 +6,15 @@
 Rect::Rect() : timer(new QTimer(this))
 {
 
-    timer->start(50);
-    connect(timer, &QTimer::timeout, this, &Rect::onTimer);
-    x = 0;
-    left = 0;
-    y = 0;
-    rotate_right = 0;
-    rotate_left = 0;
+    timer->start(10);
+    connect(timer, &QTimer::timeout, this, &Rect::turnLeft);
+    connect(timer, &QTimer::timeout, this, &Rect::turnRight);
+    x = 40;
+    y = 40;
+    rotate_right = 40;
+    rotate_left = -40;
+    ifLeft = false;
+    ifRight = false;
 }
 
 QRectF Rect::boundingRect() const
@@ -52,64 +54,44 @@ void Rect::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
     painter->restore();
 }
 
-void Rect::onTimer()
-{
-    // if (x < 180) {
-    // x++;
-    // update();
-    // }
-}
-
 void Rect::turnLeft()
 {
-    if (left == 0)
+    if (ifLeft && x > -40)
     {
-        x = -40;
-        rotate_left = 45;
+        x--;
+        rotate_left++;
+        update();
     }
-    else if (left == 1)
+    if (!ifLeft && x < 40)
     {
-        x = 0;
-        rotate_left = 0;
+        x++;
+        rotate_left--;
+        update();
     }
-    else if (left == 2)
-    {
-        x = 40;
-        rotate_left = -45;
-    }
-    else if (left == 3)
-    {
-        x = 0;
-        rotate_left = 0;
-    }
-    left++;
-    left %= 4;
-    update();
 }
 
 void Rect::turnRight()
 {
-    if (right == 0)
+    if (ifRight && y > -40)
     {
-        y = -40;
-        rotate_right = -45;
+        y--;
+        rotate_right--;
+        update();
     }
-    else if (right == 1)
+    if (!ifRight && y < 40)
     {
-        y = 0;
-        rotate_right = 0;
+        y++;
+        rotate_right++;
+        update();
     }
-    else if (right == 2)
-    {
-        y = 40;
-        rotate_right = +45;
-    }
-    else if (right == 3)
-    {
-        y = 0;
-        rotate_right = 0;
-    }
-    right++;
-    right %= 4;
-    update();
+}
+
+void Rect::setLeft()
+{
+    if(ifLeft) ifLeft = false; else ifLeft = true;
+}
+
+void Rect::setRight()
+{
+    if(ifRight) ifRight = false; else ifRight = true;
 }

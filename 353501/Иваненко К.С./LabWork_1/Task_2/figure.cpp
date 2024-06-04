@@ -42,12 +42,14 @@ void Figure::setStartPoint(const QPointF point)
 {
     m_startPoint = mapFromScene(point);
     emit pointChanged();
+    points.push_back(point);
 }
  
 void Figure::setEndPoint(const QPointF point)
 {
     m_endPoint = mapFromScene(point);
     emit pointChanged();
+    points.push_back(point);
 }
  
 QPointF Figure::startPoint() const
@@ -80,7 +82,149 @@ void Figure::setRotationY(int value)
     rotationY = value;
 }
 
-int Figure::returnArea()
+void Figure::setOuterRadius(int value)
+{
+    outerRadius = value;
+}
+
+void Figure::setInnerRadius(int value)
+{
+    innerRadius = value;
+}
+
+void Figure::setSideA(int value)
+{
+    sideA = value;
+}
+
+void Figure::setSideB(int value)
+{
+    sideB = value;
+}
+
+void Figure::setIsDrawingFirstTime(bool value)
+{
+    is_drawing_first_time = value;
+}
+
+double Figure::returnArea()
 {
     return area;
+}
+
+double Figure::returnPerimeter()
+{
+    return perimeter;
+}
+
+double Figure::returnCenterX()
+{
+    return center.x();
+}
+
+double Figure::returnCenterY()
+{
+    return center.y();
+}
+
+double Figure::returnInnerRadius()
+{
+    return innerRadius;
+}
+
+double Figure::returnOuterRadius()
+{
+    return outerRadius;
+}
+
+int Figure::returnNumber()
+{
+    return N;
+}
+
+double Figure::returnSideA()
+{
+    return sideA;
+}
+
+double Figure::returnSideB()
+{
+    return sideB;
+}
+
+double Figure::returnAngel()
+{
+    return angel;
+}
+
+void Figure::setAngel(int value)
+{
+    angel = value;
+}
+
+void Figure::setScale(double value)
+{
+    scale = value;
+}
+
+// Треугольник
+
+void Figure::setPointA_x(int value)
+{
+    A_x = value;
+}
+
+void Figure::setPointA_y(int value)
+{
+    A_y = value;
+}
+
+void Figure::setPointB_x(int value)
+{
+    B_x = value;
+}
+
+void Figure::setPointB_y(int value)
+{
+    B_y = value;
+}
+
+void Figure::setPointC_x(int value)
+{
+    C_x = value;
+}
+
+void Figure::setPointC_y(int value)
+{
+    C_y = value;
+}
+                 /*Возврат*/
+int Figure::returnPointA_x()
+{
+    return A_x;
+}
+
+int Figure::returnPointA_y()
+{
+    return A_y;
+}
+
+int Figure::returnPointB_x()
+{
+    return B_x;
+}
+
+int Figure::returnPointB_y()
+{
+    return B_y;
+}
+
+int Figure::returnPointC_x()
+{
+    return C_x;
+}
+
+int Figure::returnPointC_y()
+{
+    return C_y;
 }

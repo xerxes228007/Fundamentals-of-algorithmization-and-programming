@@ -7,13 +7,15 @@ class Rect: public QGraphicsObject {
     public:
         int x;
         int y;
+        bool ifLeft;
+        bool ifRight;
         Rect();
         QRectF boundingRect() const;
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
         void turnLeft();
         void turnRight();
-    private slots:
-        void onTimer();
+        void setLeft();
+        void setRight();
 
     private:
         int left;

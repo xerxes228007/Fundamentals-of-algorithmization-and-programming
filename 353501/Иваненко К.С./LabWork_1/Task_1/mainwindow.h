@@ -20,8 +20,7 @@ public:
 
 protected:
   Ui::MainWindow *ui;
-  Rect *rectRed;
-  Rect *rectGreen;
+  Rect *rect;
   QGraphicsScene *scene;
 
 private slots:
