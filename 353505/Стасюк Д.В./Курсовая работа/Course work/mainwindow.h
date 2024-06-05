@@ -36,6 +36,8 @@ private slots:
 
     void on_sortByDateButton_clicked();
 
+    void on_updateButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     CreateOrderWindow *createOrderW;

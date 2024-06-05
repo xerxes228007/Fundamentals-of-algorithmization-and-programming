@@ -40,10 +40,10 @@ Window {
             property real boundsDiameter: 0
             property vector3d boundsCenter
             property vector3d boundsSize
-            property bool orbitControllerEnabled: true
-            property bool gridEnabled: gridButton.checked
+            property bool orbitControllerEnabled: false
+            property bool gridEnabled: false
             property real cameraDistance: orbitControllerEnabled ? orbitCamera.z : wasdCamera.position.length()
-            property real gridInterval: Math.pow(10, Math.round(Math.log10(cameraDistance)) - 1)
+            // property real gridInterval: Math.pow(10, Math.round(Math.log10(cameraDistance)) - 1)
 
             function updateBounds(bounds) {
                 boundsSize = Qt.vector3d(bounds.maximum.x - bounds.minimum.x,
@@ -54,10 +54,10 @@ Window {
                                            (bounds.maximum.y + bounds.minimum.y) / 2,
                                            (bounds.maximum.z + bounds.minimum.z) / 2 )
 
-                wasdController.speed = boundsDiameter / 1000.0
-                wasdController.shiftSpeed = 3 * wasdController.speed
-                wasdCamera.clipNear = boundsDiameter / 100
-                wasdCamera.clipFar = boundsDiameter * 10
+                // wasdController.speed = boundsDiameter / 1000.0
+                // wasdController.shiftSpeed = 3 * wasdController.speed
+                // wasdCamera.clipNear = boundsDiameter / 100
+                // wasdCamera.clipFar = boundsDiameter * 10
                 view3D.resetView()
             }
 
@@ -66,29 +66,29 @@ Window {
                 orbitCameraNode.position = boundsCenter
                 orbitCamera.position = Qt.vector3d(50, 0, 2 * helper.boundsDiameter)
                 orbitCamera.eulerRotation = Qt.vector3d(0, 0, 0)
-                orbitControllerEnabled = true
+                // orbitControllerEnabled = true
             }
 
-            function switchController(useOrbitController) {
-                if (useOrbitController) {
-                    let wasdOffset = wasdCamera.position.minus(boundsCenter)
-                    let wasdDistance = wasdOffset.length()
-                    let wasdDistanceInPlane = Qt.vector3d(wasdOffset.x, 0, wasdOffset.z).length()
-                    let yAngle = Math.atan2(wasdOffset.x, wasdOffset.z) * 180 / Math.PI
-                    let xAngle = -Math.atan2(wasdOffset.y, wasdDistanceInPlane) * 180 / Math.PI
+            // function switchController(useOrbitController) {
+            //     if (useOrbitController) {
+            //         let wasdOffset = wasdCamera.position.minus(boundsCenter)
+            //         let wasdDistance = wasdOffset.length()
+            //         let wasdDistanceInPlane = Qt.vector3d(wasdOffset.x, 0, wasdOffset.z).length()
+            //         let yAngle = Math.atan2(wasdOffset.x, wasdOffset.z) * 180 / Math.PI
+            //         let xAngle = -Math.atan2(wasdOffset.y, wasdDistanceInPlane) * 180 / Math.PI
 
-                    orbitCameraNode.position = boundsCenter
-                    orbitCameraNode.eulerRotation = Qt.vector3d(xAngle, yAngle, 0)
-                    orbitCamera.position = Qt.vector3d(0, 0, wasdDistance)
+            //         orbitCameraNode.position = boundsCenter
+            //         orbitCameraNode.eulerRotation = Qt.vector3d(xAngle, yAngle, 0)
+            //         orbitCamera.position = Qt.vector3d(0, 0, wasdDistance)
 
-                    orbitCamera.eulerRotation = Qt.vector3d(0, 0, 0)
-                } else {
-                    wasdCamera.position = orbitCamera.scenePosition
-                    wasdCamera.rotation = orbitCamera.sceneRotation
-                    wasdController.focus = true
-                }
-                orbitControllerEnabled = useOrbitController
-            }
+            //         orbitCamera.eulerRotation = Qt.vector3d(0, 0, 0)
+            //     } else {
+            //         wasdCamera.position = orbitCamera.scenePosition
+            //         wasdCamera.rotation = orbitCamera.sceneRotation
+            //         wasdController.focus = true
+            //     }
+            //     orbitControllerEnabled = useOrbitController
+            // }
 
         }
 
@@ -203,10 +203,10 @@ Window {
             // eulerRotation.x: -30
         }
 
-        WasdController {
-            controlledObject: camera
-            rotation: animator.result
-        }
+        // WasdController {
+        //     controlledObject: camera
+        //     rotation: animator.result
+        // }
 
         DirectionalLight {
             eulerRotation.x: -30
@@ -225,8 +225,8 @@ Window {
         }
 
         Node {
-            position: helper.boundsCenter
-            // position: Qt.vector3d(0, 800, 0)
+            // position: helper.boundsCenter
+            position: Qt.vector3d(0, 800, 0)
             SequentialAnimation on eulerRotation.x {
                 loops: Animation.Infinite
                 NumberAnimation {
@@ -260,16 +260,16 @@ Window {
 
         NumberAnimation
         {
-            property quaternion start: quatHelper.eulerToQuaternionXYZ(0, -50, 0)
-            property quaternion end: quatHelper.eulerToQuaternionXYZ(0, 50, 0)
-            property quaternion result: quatHelper.slerp(start, end, progress)
-            property real progress: 0
+            property quaternion start: quatHelper.eulerToQuaternionXYZ(0, -70, 0)
+            property quaternion end: quatHelper.eulerToQuaternionXYZ(0, 100, 0)
+            property quaternion result: quatHelper.slerp(start, end, t)
+            property real t: 0
             id: animator
             target: animator
-            property: "progress"
+            property: "t"
             from: 0.0
             to: 1.0
-            duration: 4000
+            duration: 6000
             running: true
             loops: Animation.Infinite
         }

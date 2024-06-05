@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     MainWindow w;
 
-    w.engine.rootContext()->setContextProperty("modelUrl", QUrl::fromLocalFile(""));
     w.engine.load(QUrl(QStringLiteral("qrc:/mainQuat.qml")));
 
     w.show();

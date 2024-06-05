@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <createorderwindow.h>
+#include <volume.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    orders.load_from_file("");
+    orders.load_from_file("/Users/daryastasiuk/Documents/BSUIR/Courses\ work/d.txt");
     show_vector_in_table(orders.d);
     ui->countOdersLabel->setText(QString::number(orders.d.size()));
 }
@@ -54,7 +55,7 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column)
 
 void MainWindow::on_createOrderButton_clicked()
 {
-    createOrderW = new CreateOrderWindow(this);
+    createOrderW = new CreateOrderWindow(this, &this->engine, &this->orders);
     createOrderW->show();
 }
 
@@ -77,5 +78,14 @@ void MainWindow::on_sortByDateButton_clicked()
 {
     heapSort(orders.d, "date");
     show_vector_in_table(orders.d);
+}
+
+
+void MainWindow::on_updateButton_clicked()
+{
+    orders.d.clear();
+    orders.load_from_file("/Users/daryastasiuk/Documents/BSUIR/Courses\ work/d.txt");
+    show_vector_in_table(orders.d);
+    ui->countOdersLabel->setText(QString::number(orders.d.size()));
 }
 
