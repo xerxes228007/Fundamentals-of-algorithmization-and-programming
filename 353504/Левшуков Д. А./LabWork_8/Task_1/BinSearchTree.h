@@ -14,7 +14,7 @@ public:
     {
         for(auto& i:data)
             insert(root,i.first,i.second);
-        qDebug()<<root;
+        //qDebug()<<root;
     }
 
     void insert(int key,QString str)
@@ -26,7 +26,7 @@ public:
         if(v==nullptr)
         {
             v=new node(key,str);
-            qDebug()<<key<<" "<<str<<" "<<v<<" "<<root;
+            //qDebug()<<key<<" "<<str<<" "<<v<<" "<<root;
             return;
         }
         if(key<=v->key)

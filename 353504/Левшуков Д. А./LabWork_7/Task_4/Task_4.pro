@@ -13,9 +13,9 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    BinSearchTree.h \
-    mainwindow.h \
-    node.h
+    LineSolveHashTable.h \
+    QuadFuncSolveHashTable.h \
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui

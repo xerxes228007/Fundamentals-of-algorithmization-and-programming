@@ -13,9 +13,10 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    BinSearchTree.h \
-    mainwindow.h \
-    node.h
+    block.h \
+    deque.h \
+    iterator.h \
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
