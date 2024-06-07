@@ -41,7 +41,7 @@
 ##Блок-схема алгоритма, реализующего выдачу метода решения пользователю 
 
 
-Применяется в: `mainwindow/mainwindow.cpp`, в методе `clever_hint_button_clicked`, реализована в методе `GetCleverHint` в `SudokuField/PlayersField.cpp`
+Применяется в: `mainwindow/mainwindow.cpp`, в методе `clever_hint_button_clicked`, реализована в методе `GetCleverHint` в `SudokuField/Pl   ayersField.cpp`
 
 
 ![Algorithm 5 scheme](Schemes/5.png)
