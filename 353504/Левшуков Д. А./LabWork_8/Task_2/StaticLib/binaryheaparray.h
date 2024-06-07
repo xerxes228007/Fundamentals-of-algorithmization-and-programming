@@ -11,7 +11,7 @@ class BinaryHeapArray
 public:
     BinaryHeapArray();
     void insert(int key);
-    std::pair<int,bool> extrMin();
+    std::pair<int,bool> extractMax();
     void clear();
     bool empty();
     int getSize() const;

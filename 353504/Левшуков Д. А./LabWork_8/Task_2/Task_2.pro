@@ -1,5 +1,6 @@
 QT       += core gui
 LIBS += /home/dzmitry/Programming/LabWork_8/Task_2/bha.a
+LIBS += /home/dzmitry/Programming/LabWork_8/Task_2/BHL.so
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,14 +11,14 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    binaryheaplist.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     binaryheaparray.h \
     binaryheaplist.h \
-    mainwindow.h
+    mainwindow.h \
+    node.h
 
 FORMS += \
     mainwindow.ui

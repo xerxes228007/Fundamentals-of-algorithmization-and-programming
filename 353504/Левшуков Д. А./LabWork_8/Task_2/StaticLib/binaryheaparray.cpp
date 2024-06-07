@@ -41,9 +41,9 @@ void BinaryHeapArray::shiftDown(int i)
         left = 2 * i + 1;
         right = 2 * i + 2;
         j = left;
-        if (right < size_ && heap[right] < heap[left])
+        if (right < size_ && heap[right]> heap[left])
             j = right;
-        if (heap[i] <= heap[j])
+        if (heap[i] >= heap[j])
             break;
         std::swap(heap[i], heap[j]);
         i = j;
@@ -65,14 +65,14 @@ void BinaryHeapArray::insert(int key)
     shiftUp(size_-1);
 }
 
-std::pair<int,bool> BinaryHeapArray::extrMin()
+std::pair<int,bool> BinaryHeapArray::extractMax()
 {
     if (size_ == 0) return {0,false};
-    int min = heap[0];
+    int max = heap[0];
     heap[0] = heap[size_ - 1];
     size_--;
     shiftDown(0);
-    return {min,1};
+    return {max,1};
 }
 
 void BinaryHeapArray::clear()

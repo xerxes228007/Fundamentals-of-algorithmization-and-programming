@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "binaryheaparray.h"
+#include "binaryheaplist.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -17,8 +18,17 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void upd();
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
-    BinaryHeapArray * bha;
+    BinaryHeapArray  bha;
+    BinaryHeapList  bhl;
 };
 #endif // MAINWINDOW_H
