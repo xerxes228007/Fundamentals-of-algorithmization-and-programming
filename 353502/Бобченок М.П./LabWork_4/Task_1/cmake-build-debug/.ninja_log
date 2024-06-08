@@ -1,0 +1,11 @@
+# ninja log v5
+1356	1534	1716666612789522534	task1	b9f30361d8b57ffc
+1	9	1716666611269503432	/home/u/CLionProjects/Lab4/task1/cmake-build-debug/task1_autogen/mocs_compilation.cpp	ca90a0438c0a902a
+1	43	1715273438922589519	build.ninja	8e64b9694ee3476d
+158	1829	1715282879107384550	CMakeFiles/task1.dir/src/moving_rect.cpp.o	32cc8a4f35447fc8
+119	1783	1716666260769106614	CMakeFiles/task1.dir/main.cpp.o	555d56c75512f8b1
+9	1355	1716666612613520322	CMakeFiles/task1.dir/qt/main_window.cpp.o	d2e1c65448f936d5
+1	9	1716666611269503432	task1_autogen/mocs_compilation.cpp	ca90a0438c0a902a
+1	9	1716666611269503432	/home/u/CLionProjects/Lab4/task1/cmake-build-debug/task1_autogen/timestamp	ca90a0438c0a902a
+118	1783	1716666260769106614	CMakeFiles/task1.dir/task1_autogen/mocs_compilation.cpp.o	2366e7e90a1ae1a5
+1	9	1716666611269503432	task1_autogen/timestamp	ca90a0438c0a902a
