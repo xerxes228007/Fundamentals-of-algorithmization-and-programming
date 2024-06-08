@@ -9,15 +9,21 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    elements.cpp \
+    Highlighter.cpp \
+    InputLineEdit.cpp \
+    KeyObject.cpp \
+    Keyboard.cpp \
+    OutputTextEdit.cpp \
     main.cpp \
-    mainwindow.cpp \
-    sorter.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    elements.h \
-    mainwindow.h \
-    sorter.h
+    Highlighter.h \
+    InputLineEdit.h \
+    KeyObject.h \
+    Keyboard.h \
+    OutputTextEdit.h \
+    mainwindow.h
 
 FORMS += \
     mainwindow.ui
