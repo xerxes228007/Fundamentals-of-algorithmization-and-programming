@@ -2,15 +2,9 @@
 #define BINSEARCHTREE_H
 #include <QString>
 #include <QVector>
+#include "node.h"
 class bst{
-    struct node
-    {
-        int key;
-        QString str;
-        node * left=nullptr;
-        node * right=nullptr;
-        node(int key, QString s){this->key=key;str=s;}
-    };
+
     node * root=nullptr;
 
 public:
@@ -18,15 +12,21 @@ public:
 
     void fill(QVector<std::pair<int,QString>>data)
     {
-        for(auto i:data)
-            insert(i.first,i.second);
+        for(auto& i:data)
+            insert(root,i.first,i.second);
+        qDebug()<<root;
     }
 
-    void insert(node * v=root,int key,QString str)
+    void insert(int key,QString str)
+    {
+        insert(root,key,str);
+    }
+    void insert(node *& v,int key,QString str)
     {
         if(v==nullptr)
         {
             v=new node(key,str);
+            qDebug()<<key<<" "<<str<<" "<<v<<" "<<root;
             return;
         }
         if(key<=v->key)
@@ -37,7 +37,11 @@ public:
         insert(v->right,key,str);
     }
 
-    QString find(node * v =root,int key)
+    QString find(int key)
+    {
+        return find(root,key);
+    }
+    QString find(node * v,int key)
     {
         if(v==nullptr)
             return "";
@@ -45,14 +49,19 @@ public:
             return v->str;
         if(key<=v->key)
         {
-            find(v->left,key);
-            return;
+            return find(v->left,key);
+
         }
-        find(v->right,key);
+        return find(v->right,key);
 
     }
+void remove(int key,bool left=false)
+{
+    node * pred=nullptr;
+    return remove(key,root,pred,left);
+}
 
-    void remove(int key, node *v=root,node * pred=nullptr,bool left=false)
+void remove(int key, node *v,node *& pred,bool left)
     {
         if(v==nullptr)
             return;
@@ -106,13 +115,13 @@ public:
             }
             else //Normal
             {
-                Data * Successor = v->right;//Find minimal in right subtree
+                node * Successor = v->right;//Find minimal in right subtree
                 while(Successor->left!=nullptr)
                     Successor=Successor->left;
 
                 v->key=Successor->key;
-                v->info=Successor->info;
-                remove(Successor->key,v->right,tree,true); //delete old version
+                v->str=Successor->str;
+                remove(Successor->key,v->right,v,true); //delete old version
             }
 
             return;
@@ -132,7 +141,11 @@ public:
         return std::max(height(v->left),height(v->right))+1;
     }
 
-    void balance(node * v=root)
+    void balance()
+    {
+        return balance(root);
+    }
+    void balance(node *& v)
     {
         if(v==nullptr)return;
 
@@ -157,7 +170,7 @@ public:
     }
 
 
-    void Lrotate(node *v)
+    void Lrotate(node *&v)
     {
         node * temp=v->right;
         v->right=temp->left;
@@ -165,7 +178,7 @@ public:
         v=temp;
     }
 
-    void Rrotate(node *v)
+    void Rrotate(node *&v)
     {
         node * temp=v->left;
         v->left=temp->right;
@@ -175,36 +188,61 @@ public:
 
     int leaves()
     {
-
+        return leaves(root);
     }
 
+    int leaves(node * v)
+    {
+        if(v==nullptr)return 0;
+        if(v->left==v->right&& v->left==nullptr)
+            return 1;
+        return leaves(v->left)+leaves(v->right);
+    }
     //orders
+    void prefOrder(QString& way)
+    {
+        prefOrder(root,way);
+    }
     void prefOrder(node * v, QString& way)
     {
         if(v==nullptr)return;
-        way+=QString::fromStdString("{"+std::to_string(v->key))+", "+v->info+"}";
+        way+=QString::fromStdString("{"+std::to_string(v->key))+", "+v->str+"}\n";
         prefOrder(v->left,way);
         prefOrder(v->right,way);
     }
 
-    void infOrder(node * v, QVector<QString>& way)
+    void infOrder(QString& way)
+    {
+        infOrder(root,way);
+    }
+    void infOrder(node * v, QString& way)
     {
         if(v==nullptr)return;
 
         infOrder(v->left,way);
-        way+=QString::fromStdString("{"+std::to_string(v->key))+", "+v->info+"}";
-        inffOrder(v->right,way);
+        way+=QString::fromStdString("{"+std::to_string(v->key))+", "+v->str+"}\n";
+        infOrder(v->right,way);
     }
 
-    void postfOrder(node * v, QVector<QString>& way)
+    void postfOrder(QString& way)
+    {
+        postfOrder(root,way);
+    }
+    void postfOrder(node * v, QString& way)
     {
         if(v==nullptr)return;
 
         postfOrder(v->left,way);
 
         postfOrder(v->right,way);
-        way+=QString::fromStdString("{"+std::to_string(v->key))+", "+v->info+"}";
+        way+=QString::fromStdString("{"+std::to_string(v->key))+", "+v->str+"}\n";
+    }
+    node* getRoot() const
+    {
+        return root;
     }
 };
+
+
 
 #endif // BINSEARCHTREE_H
