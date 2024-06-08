@@ -2,11 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "BinSearchTree.h"
-#include <QMessageBox>
-#include <QTreeWidgetItem>
-#include "node.h"
-
+#include "rbt.h"
+#include <ctime>
+#include <random>
+#include<QMessageBox>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -21,10 +20,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void updWidget(QTreeWidgetItem *anc,node * v);
-    void showTree();
-    bool check_key();
-    bool check_str();
+    void upd();
 private slots:
     void on_pushButton_clicked();
 
@@ -32,18 +28,20 @@ private slots:
 
     void on_pushButton_3_clicked();
 
-    void on_pushButton_5_clicked();
-
-    void on_pushButton_6_clicked();
-
     void on_pushButton_4_clicked();
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::MainWindow *ui;
-    bst t;
-    int key;
-    QString str;
+    Map<int,int> m;
+    Set<int>s;
+    std::mt19937 gen;
 };
 #endif // MAINWINDOW_H
