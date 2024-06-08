@@ -68,7 +68,7 @@ void MainWindow::formStr2(Motorcycle &motorcycle, QString &str2)
 
 void MainWindow::explicitInit(long long *values, QString &str2, QString &str3)
 {
-    Motorcycle1 = {1000, 5.5, 'A', false, "BMW"};
+    Motorcycle1 = {1000, 5.5, 'D', false, "BMW"};
     formStr2(Motorcycle1, str2);
     formStr3(Motorcycle1, str3, values);
 }
@@ -77,7 +77,7 @@ void MainWindow::separatlyInit(long long *values, QString &str2, QString &str3)
 {
     Motorcycle2.engineCapacity = 1200;
     Motorcycle2.fuelConsumption = 6.0;
-    Motorcycle2.category = 'B';
+    Motorcycle2.category = 'E';
     Motorcycle2.is_electric = true;
     strcpy(Motorcycle2.brand, "Yamaha");
     formStr2(Motorcycle2, str2);
